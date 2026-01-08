@@ -87,6 +87,10 @@ a:hover {
   padding-bottom: 5.5rem;
 
 }
+.__mb60{
+  padding-bottom: 6rem;
+
+}
 .__mb-110 {
   margin-bottom: 11rem;
 }
@@ -409,4 +413,13 @@ a:hover {
 .sc3b_p-green{
   font-weight: 700;
   color:#49d4c6 ;
+}
+.sc3b-pic-2{
+  position: relative;
+}
+.sc3b-pic-2-text_img{
+  width: 56.3rem;
+  position: absolute;
+  left:-10px;
+  bottom: -60px;
 }
