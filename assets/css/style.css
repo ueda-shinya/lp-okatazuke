@@ -1,0 +1,412 @@
+@charset "UTF-8";
+
+/* リーリース時には消すこと!!! */
+* {
+  /* outline: 1px rgba(255, 0, 0, 0.8) solid; */
+}
+/* 変数の定義 */
+:root {
+  --page-max: 1440px; /* ページ外枠の最大幅（背景/大きなグリッド） */
+  --container-max: 750px; /* 本文コンテンツの最大幅（可読幅） */
+  --min-page: 375px; /* サイトの最小想定幅（レイアウト崩れ防止） */
+  --gutter: clamp(16px, 4vw, 32px); /* 端の余白：fluid */
+}
+html {
+  scroll-behavior: smooth;
+  /* コンテンツ幅でのフォントサイズ */
+  font-size: clamp(1px, calc(10px / 750px * 100vw), 10px);
+  max-width: var(--page-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  max-width: var(--container-max);
+  min-width: var(--min-page);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 8px rgba(33, 33, 33, 0.5);
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Yu Gothic", "YuGothic", "Meiryo", sans-serif;
+}
+
+html,
+body {
+  /* height: 100%; */
+}
+
+/* 画面全体ラッパー */
+.l-app {
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  /* iOSのノッチ・ホームバー分の安全マージン */
+  padding-top: env(safe-area-inset-top);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+}
+
+/* 必要なら、背景色やレイアウト全体をここで指定 */
+.l-app {
+  background-color: #fff;
+  /* 例：全体のレイアウト調整など */
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+a {
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.6;
+}
+.l-cta {
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 3.4rem;
+  background-color: #fefdf0;
+}
+/*  */
+.__mg-auto {
+  margin-inline: auto;
+}
+.__pb55{
+  padding-bottom: 5.5rem;
+}
+.__mb30{
+  padding-bottom: 3rem;
+
+}
+.__mb55{
+  padding-bottom: 5.5rem;
+
+}
+.__mb-110 {
+  margin-bottom: 11rem;
+}
+.__text-l {
+  margin-left: -0.5em;
+}
+.__4dotos-base{
+  position: relative;
+}
+.__4dotos{
+  display: block;
+  width: 0.9rem;
+  height: 7rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0) ;
+
+}
+/* CTA */
+.p-cta-copy {
+  width: 54.7rem;
+  margin-bottom: 1rem;
+}
+.p-btn-cat {
+  width: 70.6rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0.6rem 0.4rem rgba(17, 39, 37, 0.35));
+}
+.p-cta-memo {
+  width: 21.8rem;
+  margin-left: auto;
+  margin-right: 6rem;
+}
+
+.sc02-1 {
+  width: 100%;
+  height: auto;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  padding-bottom: 100px;
+  position: relative;
+  /* aspect-ratio: 1500/2746; */
+  background-image: url("../images/sc2-bck-1@2x.webp"),
+    url("../images/sc2-bck-2@2x.webp");
+  background-position: top, bottom;
+  background-size: 75rem auto, 75rem auto;
+  background-repeat: no-repeat, repeat-y;
+}
+/* あなたも、こんな */
+.sc02-text-1_img {
+  width: 31.2rem;
+}
+/* 片付けの悩み */
+.sc02-text-2_img {
+  width: 49.7rem;
+  margin-top: 5.2rem;
+  margin-top: 12px;
+}
+/* 一人で抱えていませんか? */
+.sc02-text-3_img {
+  width: 50.8rem;
+  margin-top: 5.2rem;
+  margin-top: 20px;
+}
+/* 実は... */
+.sc02-text-4_img {
+  width: 11.6rem;
+  margin-top: 5.2rem;
+  margin-top: 30px;
+}
+/* 受講生の多くが最初はあなたと同じ */
+.sc02-text-5_img {
+  width: 33rem;
+  margin-top: 0rem;
+  margin-top: 5px;
+  margin-left: 20rem;
+  margin-left: 20px;
+}
+/* 出口のない悩みを抱えていました */
+.sc02-text-6_img {
+  width: 65.6rem;
+  margin-top: 5.2rem;
+  margin-top: 50px;
+}
+/* 悩み */
+.p-nayami_ul {
+  display: block;
+  width: 60rem;
+  margin-top: 9rem;
+}
+.p-nayami_ul_li {
+  display: flex;
+  margin-bottom: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+  background-color: #ffffff;
+}
+.p-nayami_ul_li::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2.6rem;
+  margin-left: 2rem;
+  margin-right: 2.5rem;
+  background-image: url("../images/sc2-checkbox@2x.webp");
+  background-size: contain;
+}
+.p-nayami_ul_li_p {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #4d4538;
+  letter-spacing: 0.0075em;
+  line-height: calc(40 / 30);
+}
+.p-nayami_ul_li_p_span {
+  font-weight: 700;
+  color: #ce5469;
+}
+.sc02-1_p {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #4d4538;
+  letter-spacing: 0.01em;
+  line-height: calc(60 / 30);
+  text-align: center;
+}
+.sc02-1_p_span {
+  font-weight: 700;
+  color: #ce5469;
+}
+
+/* あなたは、ひとりではありません! */
+
+.sc02-2 {
+  width: 100%;
+  padding-top: 5rem;
+  padding-top: 50px;
+  aspect-ratio: 1500/1346;
+  background-image: url("../images/sc2-bck-3@2x.webp");
+  background-size: cover;
+  text-align: center;
+}
+.sc02-2_p {
+  margin-bottom: 8rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: calc(60 / 40);
+  letter-spacing: 0.01em;
+  color: #4d4538;
+}
+.sc02-2_h2 {
+  margin-bottom: 5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: calc(60 / 40);
+  letter-spacing: 0.0075em;
+  color: #00c5bd;
+}
+.sc02-2-pic-area {
+  width: 100%;
+  padding-bottom: 14rem;
+  position: relative;
+}
+.sc02-2_img {
+  width: 70rem;
+  position: relative;
+}
+.sc02-text-7_img {
+  display: block;
+  width: 59.2rem;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 8rem;
+}
+/*  */
+.sc03 {
+  width: 100%;
+  padding-top: 5rem;
+  background-image: url("../images/sc3a-bck@2x.webp");
+  background-size: contain;
+
+  text-align: center;
+}
+
+.sc03-pic-area {
+  width: 100%;
+  margin-bottom: 50px;
+  position: relative;
+}
+.sc03-pic-area_img {
+  width: 70rem;
+}
+.sc03-pic-area-text1 {
+  display: block;
+  width: 37.1rem;
+  position: absolute;
+  top: 186px;
+  left: 45px;
+}
+.sc03-pic-area-text2 {
+  display: block;
+  width: 45.4rem;
+  position: absolute;
+  bottom: 20px;
+  right: 45px;
+}
+
+.sc3a_p {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: calc(60 / 30);
+  letter-spacing: 0.01em;
+  color: #4d4538;
+}
+
+.sc3a_p-red {
+  color: #ce5469;
+}
+.sc3a_p-bolod {
+  font-weight: 700;
+}
+.sc3a-h2-area {
+  width: 70rem;
+  min-height: 14.9rem;
+  margin-inline: auto;
+  margin-bottom: 6rem;
+  padding: 3rem 0;
+  background-image: url("../images/sc3a-h2-bck@2x.webp");
+  background-position: center center;
+  background-size: 100% 100%;
+  text-align: center;
+}
+.sc3a_h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: calc(53 / 35);
+  letter-spacing: 0.0075em;
+  color: #ffffff;
+}
+.sc3a_h2-yelow {
+  font-size: 4.7rem;
+  font-weight: 700;
+  line-height: calc(47 / 35);
+  letter-spacing: 0.0075em;
+  color: #fef53a;
+}
+.sc3a_h3 {
+  margin-bottom: 5.5rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: calc(60 / 30);
+  letter-spacing: 0.01em;
+  color: #ce5469;
+}
+.sc3a-cards {
+  display: flex;
+  width: 70rem;
+  margin-inline: auto;
+  margin-bottom: 5.5rem;
+  justify-content: space-between;
+}
+.sc3a-card {
+  width: 33.6rem;
+  height: auto;
+}
+.sc3a-bucket {
+  width: 73.5rem;
+  height: auto;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+  padding-bottom: 5rem;
+  background-image: url("../images/sc3a-bucket-text-bck@2x.webp");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+}
+.sc3a-bucket_img {
+  width: 74.6rem;
+  margin-inline: auto;
+}
+.sc3a-bucket-text {
+  margin-left: 6rem;
+  font-size: 2.8rem;
+  text-align: left;
+  font-weight: 500;
+  line-height: calc(60 / 28);
+  letter-spacing: 0.0075em;
+  color: #4d4538;
+}
+.sc3a-bucket-text-red {
+  font-weight: 700;
+  color: #ce5469;
+}
+
+/*  */
+.sc3b{
+  width: 100%;
+
+  background-image: url('../images/sc3b-bck@2x.webp');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+
+}
+.sc3b-inner{
+  width: 70rem;
+  margin-inline: auto;
+  padding-bottom: 10rem;
+}
+.sc3b_p{
+  font-size: 3rem;
+  line-height: calc(60/30);
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  color: #4d4538;
+}
+.sc3b_p-green{
+  font-weight: 700;
+  color:#49d4c6 ;
+}
