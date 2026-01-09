@@ -76,9 +76,8 @@ a:hover {
 .__mg-auto {
   margin-inline: auto;
 }
-.__pb30{
+.__pb30 {
   padding-bottom: 3rem;
-
 }
 .__pb55 {
   padding-bottom: 5.5rem;
@@ -95,7 +94,7 @@ a:hover {
 .__mb30 {
   margin-bottom: 3rem;
 }
-.__mb35{
+.__mb35 {
   margin-bottom: 3.5rem;
 }
 .__mb40 {
@@ -107,21 +106,36 @@ a:hover {
 .__mb60 {
   margin-bottom: 6rem;
 }
+.__mb90 {
+  margin-bottom: 9rem;
+}
 .__mb100 {
   margin-bottom: 10rem;
 }
 .__mb110 {
   margin-bottom: 11rem;
 }
-.__mb135{
+.__mb135 {
   margin-bottom: 13.5rem;
+}
+.__mb145 {
+  margin-bottom: 14.5rem;
+}
 
+.__mb-sc4a-card {
+  margin-bottom: 200px;
 }
-.__w327{
-width: 32.7rem;
+.__w327 {
+  width: 32.7rem;
 }
-.__w386{
+.__w386 {
   width: 38.6rem;
+}
+.__w545{
+  width: 54.5rem;
+}
+.__w566{
+  width: 56.6rem;
 }
 .__text-l {
   margin-left: -0.5em;
@@ -452,7 +466,7 @@ width: 32.7rem;
 }
 /*  */
 .sc4a {
-  padding: 13rem 0 7rem;
+  padding: 13rem 0 20rem;
 
   background-image: url("../images/sc4a-bck@2x.webp");
   background-position: top center;
@@ -492,7 +506,6 @@ width: 32.7rem;
   color: #ffffff;
 }
 .sc4a-card-before_img {
-
 }
 .sc4a-card-after {
   width: 38.4rem;
@@ -530,4 +543,144 @@ width: 32.7rem;
 }
 .sc4a-card-after_p-green {
   color: #00c5bd;
+}
+/*  */
+.sc4b {
+  margin-top: -20rem;
+  padding-bottom: 9rem;
+  background-image: url("../images/sc4b-bck@2x.webp");
+  background-position: top center;
+  background-size: 100% auto;
+}
+.sc4b_h2 {
+  width: fit-content;
+  position: relative;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: calc(60 / 35);
+  letter-spacing: 0.01em;
+  color: #4d4538;
+  text-align: center;
+}
+.sc4b_h2::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0.2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0rem;
+  transform: translateX(-50%);
+  background-color: #4d4538;
+}
+.sc4b_p {
+  margin-left: 1rem;
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: calc(45 / 23);
+  color: #4d4538;
+  letter-spacing: 0.005em;
+}
+.profile {
+  position: relative;
+}
+.profile_img {
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+.profile-text_img {
+  width: 26.4rem;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.profile_pic {
+  width: 16rem;
+  position: absolute;
+  top: -9rem;
+  right: 0rem;
+}
+
+.profile-text1_img {
+  width: 26.4rem;
+  position: absolute;
+  top: 11.5rem;
+  right: 5rem;
+}
+.profile-text2_img {
+  width: 7.6rem;
+  position: absolute;
+  top: 48.5rem;
+  left: 10.5rem;
+}
+.profile-text3_img {
+  width: 8.7rem;
+  position: absolute;
+  top: 48.5rem;
+  left: 2rem;
+}
+.profile-text4_img {
+  width: 24.3rem;
+  position: absolute;
+  top: 65rem;
+  left: 21rem;
+}
+.sc4b-text_p {
+  font-size: 3rem;
+  line-height: calc(60 / 30);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #4d4538;
+  text-align: center;
+}
+.sc4b-text_p-red {
+  font-weight: 700;
+  color: #ff822b;
+}
+.sc4c {
+  padding-top: 7rem;
+  padding-bottom: 6.5rem;
+  background-image: url("../images/sc4c-tokuten-bck@2x.webp");
+  background-position: top center;
+  background-size: 100% auto;
+}
+.sc4c-header {
+  width: 61.3rem;
+}
+.sc4c-tokuten {
+  width: 70rem;
+  padding: 1.75rem;
+  position: relative;
+  background-color: #ffffff;
+  filter: drop-shadow(0 0.3rem 1rem rgba(25, 45, 44,0.46));
+}
+.sc4c-tokuten-inner {
+  width: 100%;
+  padding: 2rem 0;
+  border: solid 0.2rem #f1c67a;
+}
+.tokuten-l_img {
+  width: 46.4rem;
+  position: absolute;
+  top: -7.4rem;
+  left: -2.4rem;
+}
+.tokuten-r_img {
+  width: 17.7rem;
+  position: absolute;
+  top: -9.8rem;
+  right: -2.4rem;
+}
+.tokuten-card {
+  padding: 3.15rem;
+}
+.tokuten-card_p{
+  margin-top: 2rem;
+  margin-left: 11.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+  line-height: calc(43/24);
+  font-weight: 500;
+  color: #4d4538;
 }
