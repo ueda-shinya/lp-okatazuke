@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-/* リーリース時には消すこと!!! */
-* {
-  /* outline: 1px rgba(255, 0, 0, 0.8) solid; */
-}
 /* 変数の定義 */
 :root {
   --page-max: 1440px; /* ページ外枠の最大幅（背景/大きなグリッド） */
@@ -25,7 +21,7 @@ body {
   min-width: var(--min-page);
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 0 8px rgba(33, 33, 33, 0.5);
+  box-shadow: 0 0 0.8rem rgba(33, 33, 33, 0.5);
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     "Yu Gothic", "YuGothic", "Meiryo", sans-serif;
 }
@@ -123,7 +119,7 @@ a:hover {
 }
 
 .__mb-sc4a-card {
-  margin-bottom: 200px;
+  margin-bottom: 20rem;
 }
 .__w327 {
   width: 32.7rem;
@@ -131,10 +127,10 @@ a:hover {
 .__w386 {
   width: 38.6rem;
 }
-.__w545{
+.__w545 {
   width: 54.5rem;
 }
-.__w566{
+.__w566 {
   width: 56.6rem;
 }
 .__text-l {
@@ -172,11 +168,11 @@ a:hover {
   width: 100%;
   height: auto;
   padding-top: 5rem;
-  padding-bottom: 3rem;
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
   position: relative;
   /* aspect-ratio: 1500/2746; */
-  background-image: url("../images/sc2-bck-1@2x.webp"),
+  /* background-image: url("../images/sc2-bck-1@2x.webp"), */
+  background-image: url("../images/sc2-bck-1-b@2x.webp"),
     url("../images/sc2-bck-2@2x.webp");
   background-position: top, bottom;
   background-size: 75rem auto, 75rem auto;
@@ -189,34 +185,29 @@ a:hover {
 /* 片付けの悩み */
 .sc02-text-2_img {
   width: 49.7rem;
-  margin-top: 5.2rem;
-  margin-top: 12px;
+  margin-top: 1.2rem;
 }
 /* 一人で抱えていませんか? */
 .sc02-text-3_img {
   width: 50.8rem;
-  margin-top: 5.2rem;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 /* 実は... */
 .sc02-text-4_img {
   width: 11.6rem;
-  margin-top: 5.2rem;
-  margin-top: 30px;
+  /* margin-top: 5.2rem; */
+  margin-top: 3rem;
 }
 /* 受講生の多くが最初はあなたと同じ */
 .sc02-text-5_img {
   width: 33rem;
-  margin-top: 0rem;
-  margin-top: 5px;
-  margin-left: 20rem;
-  margin-left: 20px;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
 }
 /* 出口のない悩みを抱えていました */
 .sc02-text-6_img {
   width: 65.6rem;
-  margin-top: 5.2rem;
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 /* 悩み */
 .p-nayami_ul {
@@ -271,7 +262,6 @@ a:hover {
 .sc02-2 {
   width: 100%;
   padding-top: 5rem;
-  padding-top: 50px;
   aspect-ratio: 1500/1346;
   background-image: url("../images/sc2-bck-3@2x.webp");
   background-size: cover;
@@ -321,7 +311,7 @@ a:hover {
 
 .sc03-pic-area {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
   position: relative;
 }
 .sc03-pic-area_img {
@@ -331,15 +321,15 @@ a:hover {
   display: block;
   width: 37.1rem;
   position: absolute;
-  top: 186px;
-  left: 45px;
+  top: 18.6rem;
+  left: 4.5rem;
 }
 .sc03-pic-area-text2 {
   display: block;
   width: 45.4rem;
   position: absolute;
-  bottom: 20px;
-  right: 45px;
+  bottom: 2rem;
+  right: 4.5rem;
 }
 
 .sc3a_p {
@@ -586,14 +576,14 @@ a:hover {
 }
 .profile_img {
   position: relative;
-  left: 0px;
-  top: 0px;
+  left: 0rem;
+  top: 0rem;
 }
 .profile-text_img {
   width: 26.4rem;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0rem;
+  right: 0rem;
 }
 .profile_pic {
   width: 16rem;
@@ -641,9 +631,10 @@ a:hover {
 .sc4c {
   padding-top: 7rem;
   padding-bottom: 6.5rem;
-  background-image: url("../images/sc4c-tokuten-bck@2x.webp");
+  background: url("../images/sc4c-tokuten-bck@2x.webp"),#effefe;
   background-position: top center;
   background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 .sc4c-header {
   width: 61.3rem;
@@ -653,7 +644,7 @@ a:hover {
   padding: 1.75rem;
   position: relative;
   background-color: #ffffff;
-  filter: drop-shadow(0 0.3rem 1rem rgba(25, 45, 44,0.46));
+  filter: drop-shadow(0 0.3rem 1rem rgba(25, 45, 44, 0.46));
 }
 .sc4c-tokuten-inner {
   width: 100%;
@@ -675,12 +666,87 @@ a:hover {
 .tokuten-card {
   padding: 3.15rem;
 }
-.tokuten-card_p{
+.tokuten-card_p {
   margin-top: 2rem;
   margin-left: 11.5rem;
   margin-bottom: 0.5rem;
   font-size: 2.4rem;
-  line-height: calc(43/24);
+  line-height: calc(43 / 24);
   font-weight: 500;
   color: #4d4538;
+}
+.sc4ctokuten-text_p {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: calc(60 / 30);
+  color: #4d4538;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.sc4ctokuten-text_p-green {
+  font-weight: 700;
+  color: #57d5c8;
+}
+.sc4ctokuten-text_p-price {
+  width: fit-content;
+  font-size: 4rem;
+  line-height: calc(60 / 40);
+  background-color: #fef53a;
+}
+.sc4c-tokuten_img {
+  width: 70rem;
+}
+.last-copy {
+  width: 70rem;
+  padding: 6rem 0;
+
+  background-image: url("../images/last-copy-bck@2x.webp");
+  background-size: cover;
+}
+.last-copy_p {
+  font-size: 3rem;
+  line-height: calc(60 / 30);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #4d4538;
+
+  text-align: center;
+}
+.last-copy_p-green {
+  font-weight: 700;
+  color: #57d5c8;
+}
+/*  */
+footer {
+  padding: 1rem 0;
+  background: linear-gradient(to right, #57ccc0 0%, #2ebcad 54%);
+  /* background: linear-gradient(to right, #57ccc0 0%, #2ebcad 50%, #2c90ac 100%); */
+
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: calc(60 / 20);
+  color: #ffffff;
+
+  text-align: center;
+}
+.footer-upper {
+  display: flex;
+  width: fit-content;
+  height: auto;
+  align-items: center;
+}
+footer a {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #ffffff;
+}
+footer p {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #ffffff;
+  text-align: center;
 }
